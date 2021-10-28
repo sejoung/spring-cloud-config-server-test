@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  app:
+    image: 12314.dkr.ecr.ap-northeast-2.amazonaws.com/config-server:latest
+    ports:
+      - 8028:8028
+    volumes:
+      - ~/.aws/credentials:/home/lific/.aws/credentials:ro

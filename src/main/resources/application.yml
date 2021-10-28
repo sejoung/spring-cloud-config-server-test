@@ -1,12 +1,9 @@
 spring:
+  profiles:
+    active: awss3
   cloud:
     config:
       server:
-        git:
-          uri: git@github.com:sejoung/spring-cloud-server-test.git
-          private-key: |
-            -----BEGIN RSA PRIVATE KEY-----
-            ...
-            -----END RSA PRIVATE KEY-----
-          ignore-local-ssh-settings: true
-          default-label: develop
+        awss3:
+          region: ap-northeast-2
+          bucket: test
